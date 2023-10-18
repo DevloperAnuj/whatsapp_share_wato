@@ -210,6 +210,7 @@ public class WhatsappShare implements FlutterPlugin, MethodCallHandler {
             intent.putExtra(Intent.EXTRA_SUBJECT, title);
             intent.putExtra(Intent.EXTRA_TEXT, text);
             intent.putExtra(Intent.EXTRA_STREAM, files);
+            intent.setType("text/plain");
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
             //Intent chooserIntent = Intent.createChooser(intent, chooserTitle);
